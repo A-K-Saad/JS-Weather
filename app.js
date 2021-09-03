@@ -168,12 +168,12 @@ const fetchWeather = async () => {
     cityField.innerText = `${name}, ${country}`;
     tempField.innerText = `${temp}°C`;
     minMaxField.innerText = `${temp_min}/${temp_max}`;
-    //------------------------------------------------------------
+   /*  //------------------------------------------------------------
     setInterval(() => {
         let date = new Date();
         let time = `${date.getHours()+utcHr}: ${date.getMinutes()}: ${date.getSeconds()}`;
         timeField.innerText = time;
-    }, 1000);
+    }, 1000); */
 
     iconField.innerHTML = `
     <img src="https://www.openweathermap.org/img/wn/${icon}@2x.png" alt="" class="d-block mx-auto" id="icon">
@@ -183,6 +183,11 @@ const fetchWeather = async () => {
     windField.innerText = `Wind: ${speed} km/h`;
     cityInput.value = "";
     searchBtn.setAttribute("disabled", true);
+
+    document.body.style.background=`url(https://source.unsplash.com/1600x900/?${main})`;
+    document.body.style.backgroundRepeat="no-repeat";
+    document.body.style.backgroundSize="cover";
+
 }
 //Disableing and Enableing the search button for empty field
 const disableBtn = () => {
