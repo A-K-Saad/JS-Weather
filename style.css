@@ -22,7 +22,7 @@ body{
     width: 100%;
     outline: none;
 }
-.temp{
+#temp{
     text-shadow: 5px 5px 0px rgb(0, 0, 0);
 }
 .fa-street-view{
